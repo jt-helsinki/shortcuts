@@ -13,6 +13,8 @@ Desktop.ini
 .Trashes
 
 # IDE-specific (Intelli-J)
+#########################
+
 .idea/
 .settings/
 .project
@@ -21,18 +23,23 @@ Desktop.ini
 *.iml
 
 # Compiled class file
+#########################
+
 *.class
 
 # Log file
+#########################
+
 *.log
 
-# BlueJ files
-*.ctxt
-
 # Mobile Tools for Java (J2ME)
+#########################
+
 .mtj.tmp/
 
 # Package Files #
+#########################
+
 *.jar
 *.war
 *.ear
