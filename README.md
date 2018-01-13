@@ -1,2 +1,2 @@
-# commands
-A rumber of cheat sheets for commonly used commands
+# Shortcuts
+A number of cheat sheets for commonly used commands
