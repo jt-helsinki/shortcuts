@@ -1,8 +1,24 @@
-#IDE - IntelliJ
-*.idea
-.idea/*
-.idea
-*.ipr
+# OS-specific
+#########################
+
+$RECYCLE.BIN/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE-specific (Intelli-J)
+.idea/
+.settings/
+.project
+.classpath
+*.launch
+*.iml
 
 # Compiled class file
 *.class
