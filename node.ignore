@@ -1,0 +1,39 @@
+# OS-specific
+#########################
+
+$RECYCLE.BIN/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# IDE-specific
+#########################
+
+.idea/
+.settings/
+.project
+.classpath
+*.launch
+*.iml
+
+# general
+#########################
+
+.sass-cache/
+.tmp/
+tmp/
+temp/
+dist/
+dll/
+npm-debug.log
+
+# project-specific
+#########################
+
+node_modules/
