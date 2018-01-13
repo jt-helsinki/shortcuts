@@ -13,6 +13,10 @@ installed on your system (`brew install jq`).
 
 `git diff`
 
+#### Reset to the last commit
+
+`git reset --hard`
+
 ## Branches
 
 #### List all the branches in the repository.
