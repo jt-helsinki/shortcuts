@@ -43,8 +43,10 @@ installed on your system (`brew install jq`).
 
 #### Rollback on local and remote
 
-```git reset --hard <commit-hash>
-git push -f origin <destination branch>```
+```
+git reset --hard <commit-hash>
+git push -f origin <destination branch>
+```
 
 
 
