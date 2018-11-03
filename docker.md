@@ -5,6 +5,10 @@ installed on your system (`brew install jq`).
 
 ## Containers
 
+#### Start a container with port mapping
+
+docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]
+
 #### List running docker containers:
 
 `docker ps`
@@ -15,6 +19,10 @@ installed on your system (`brew install jq`).
 
 #### Stop all containers
 `docker stop $(docker ps -a -q)`
+
+#### Stop a runing container by the image name
+
+docker stop $(docker ps --filter status=running --filter ancestor=[IMAGE NAME HERE] --format "{{.ID}}")
 
 #### Delete all stopped containers
 `docker rm $(docker ps -a -q)`
@@ -44,7 +52,7 @@ Note, be careful using this as deleting the `amazon/amazon-ecs-agent:latest` con
 `docker images -q --no-trunc -f dangling=true | xargs docker rmi`
 
 #### Explore image by image name
-`docker inspect IMAGE [IMAGE...]`
+`docker inspect IMAGE [IMAGE NAME HERE]`
 
 ## Volumes
 
