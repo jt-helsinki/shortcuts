@@ -1,13 +1,14 @@
 # Common Docker Command Cheatsheet
 
-A list of common commands for working with Docker. Ensure you have **_JQ_**
-installed on your system (`brew install jq`).
+A list of common commands for working with Docker. 
+
+**_NOTE_** to process JSON it might be helpful to have **_JQ_** installed on your system (`brew install jq`). **_JQ_** is a lightweight and flexible command-line JSON processor. More details can be found here [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 
 ## Containers
 
 #### Start a container with port mapping
 
-docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]
+`docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]`
 
 #### List running docker containers:
 
@@ -22,7 +23,7 @@ docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]
 
 #### Stop a runing container by the image name
 
-docker stop $(docker ps --filter status=running --filter ancestor=[IMAGE NAME HERE] --format "{{.ID}}")
+`docker stop $(docker ps --filter status=running --filter ancestor=[IMAGE NAME HERE] --format "{{.ID}}")`
 
 #### Delete all stopped containers
 `docker rm $(docker ps -a -q)`
