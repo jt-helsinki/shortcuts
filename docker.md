@@ -2,7 +2,7 @@
 
 A list of common commands for working with Docker. 
 
-**_NOTE_** to process JSON it might be helpful to have **_JQ_** installed on your system (`brew install jq`). **_JQ_** is a lightweight and flexible command-line JSON processor. More details can be found here [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
+**NOTE:** to process JSON it might be helpful to have **JQ** installed on your system (`brew install jq`). **JQ** is a lightweight and flexible command-line JSON processor. More details can be found here [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 
 ## Containers
 
@@ -34,9 +34,9 @@ A list of common commands for working with Docker.
 #### Delete all containers
 `docker rm  -f $(docker ps -a -q)`
 
-Note, be careful using this as deleting the `amazon/amazon-ecs-agent:latest` container
- means the ECS service will no longer run. If this does happen, simply recreate the
- service in the ECS cluster setup.
+**NOTE:** when using AWS ECS be careful using this as deleting the `amazon/amazon-ecs-agent:latest` 
+container means the ECS service will no longer run. If this does happen, simply recreate the service 
+in the ECS cluster setup.
 
 #### Explore container by container ID     (very handy for viewing filesystem of container)ls
 `docker exec -t -i container-id bash`
