@@ -60,6 +60,14 @@ in the ECS cluster setup.
 #### Explore image by image name
 `docker inspect IMAGE [IMAGE NAME HERE]`
 
+#### Start Container with Interactive Shell (Non-Dameon)
+`docker run -i -t --rm ubuntu /bin/bash`  
+NOTE: This will exit the container after the session ends.
+
+#### Start Container with Interactive Shell (Dameon) 
+`docker run --name daemon -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"`  
+Run as a daemon to keep the container running after the end of the session.
+
 ## Volumes
 
 #### Delete all dangling volumes
