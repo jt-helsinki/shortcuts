@@ -43,8 +43,13 @@ in the ECS cluster setup.
 
 ## Images
 
+#### Show all images
+`docker images`
+
 #### Delete all images
 `docker rmi $(docker images -q)`
+
+`docker rmi -f $(docker images -q)` (with force option)
 
 #### Delete all dangling images
 `docker rmi $(docker images -q -f dangling=true)`
