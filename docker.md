@@ -64,7 +64,8 @@ in the ECS cluster setup.
 
 ## Exploring Images and Running Containers
 
-#### Explore container by container ID     (very handy for viewing filesystem of container)ls
+#### Explore running container by container ID     
+`docker ps -a` (list container ids)  
 `docker exec -t -i container-id bash`
 
 #### Explore image by image name
