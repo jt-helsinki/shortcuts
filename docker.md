@@ -38,9 +38,6 @@ A list of common commands for working with Docker.
 container means the ECS service will no longer run. If this does happen, simply recreate the service 
 in the ECS cluster setup.
 
-#### Explore container by container ID     (very handy for viewing filesystem of container)ls
-`docker exec -t -i container-id bash`
-
 ## Images
 
 #### Show all images
@@ -57,6 +54,19 @@ in the ECS cluster setup.
 #### Delete all untagged, unnamed, dangling images
 `docker images -q --no-trunc -f dangling=true | xargs docker rmi`
 
+## Volumes
+
+#### Delete all dangling volumes
+`docker volume rm $(docker volume ls -q -f dangling=true)`
+
+#### View mounted volumes on a machine
+`docker inspect -f {{.Mounts}} container-id`
+
+## Exploring Images and Running Containers
+
+#### Explore container by container ID     (very handy for viewing filesystem of container)ls
+`docker exec -t -i container-id bash`
+
 #### Explore image by image name
 `docker inspect IMAGE [IMAGE NAME HERE]`
 
@@ -67,14 +77,6 @@ NOTE: This will exit the container after the session ends.
 #### Start Container with Interactive Shell (Dameon) 
 `docker run --name daemon -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"`  
 Run as a daemon to keep the container running after the end of the session.
-
-## Volumes
-
-#### Delete all dangling volumes
-`docker volume rm $(docker volume ls -q -f dangling=true)`
-
-#### View mounted volumes on a machine
-`docker inspect -f {{.Mounts}} container-id`
 
 ## Misc
 
