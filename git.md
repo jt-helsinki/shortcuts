@@ -48,6 +48,16 @@ git reset --hard <commit-hash>
 git push -f origin <destination branch>
 ```
 
+## Logs & Tags
+
+#### List tags
+
+`git for-each-ref --format='%(refname) Tag: %(taggername) %(taggeremail) %(taggerdate) Commit: %(authorname) %(authoremail) %(authordate)' refs/tags`
+
+#### Display history in a graphical format
+
+`git log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'`
+
 
 
 
