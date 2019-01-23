@@ -41,16 +41,19 @@ installed on your system (`brew install jq`).
 
 `git rebase --autosquash -i origin/master`
 
-Fix any issues . 
+Fix any issues and add them back in.
+   
 `git add .`
 
-`git rebase --continue `
+`git rebase --continue`
+
+Finally push your changes.
 
 `git push --force-with-lease`
 
 ## Rollbacks
 
-#### Rollback on local
+#### Rollback on local to a specific commit
 
 `git reset --hard <commit-hash>`
 
