@@ -35,6 +35,19 @@ installed on your system (`brew install jq`).
 
 `git branch -D <branch>`
 
+## Rebasing 
+
+#### Rebase and Squash
+
+`git rebase --autosquash -i origin/master`
+
+Fix any issues . 
+`git add .`
+
+`git rebase --continue `
+
+`git push --force-with-lease`
+
 ## Rollbacks
 
 #### Rollback on local
@@ -57,6 +70,9 @@ git push -f origin <destination branch>
 #### Display history in a graphical format
 
 `git log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'`
+
+
+`
 
 
 
