@@ -42,6 +42,8 @@ installed on your system (`brew install jq`).
 `git rebase --autosquash -i origin/master`
 
 Fix any issues and add them back in.
+
+`git comit --fixup <branchname>`
    
 `git add .`
 
