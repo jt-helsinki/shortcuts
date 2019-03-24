@@ -25,16 +25,19 @@ A list of common commands for working with Docker.
 #### Stop all containers
 `docker stop $(docker ps -a -q)`
 
-#### Stop a runing container by the image name
+#### Stop a running container by the image name
 
 `docker stop $(docker ps --filter status=running --filter ancestor=[IMAGE NAME HERE] --format "{{.ID}}")`
 
-#### Stop a runing container by the container name
+#### Stop a running container by the container name
 
 `docker stop $(docker ps --filter status=running --filter name=[IMAGE NAME HERE] --format "{{.ID}}")`
 
 #### Delete all stopped containers
 `docker rm $(docker ps -a -q)`
+
+#### Delete exited container by name
+`docker rm $(docker ps --filter status=exited --filter name=[IMAGE NAME HERE] --format "{{.ID}}")`
 
 #### Delete all exited containers
 `docker ps -aq -f status=exited | xargs docker rm`
