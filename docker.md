@@ -10,6 +10,10 @@ A list of common commands for working with Docker.
 
 `docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]`
 
+#### Start a container with port mapping and custom container name
+
+`docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] --name=[CUSTOM CONTAINER NAME HERE] [IMAGE NAME HERE]`
+
 #### List running docker containers:
 
 `docker ps`
@@ -24,6 +28,10 @@ A list of common commands for working with Docker.
 #### Stop a runing container by the image name
 
 `docker stop $(docker ps --filter status=running --filter ancestor=[IMAGE NAME HERE] --format "{{.ID}}")`
+
+#### Stop a runing container by the container name
+
+`docker stop $(docker ps --filter status=running --filter name=[IMAGE NAME HERE] --format "{{.ID}}")`
 
 #### Delete all stopped containers
 `docker rm $(docker ps -a -q)`
