@@ -95,6 +95,9 @@ docker ps -aq -f status=exited | xargs docker rm
 #### View logs for a container
 `docker logs container-id`
 
+#### View stats for a container
+`docker stats container-id`
+
 #### Command to ensure container does not exit upon startup
 `CMD exec /bin/sh -c "trap : TERM INT; (while true; do sleep 1000; done) & wait"`  
 Add this to the end of your Dockerfile to when developing your to help with debugging.
