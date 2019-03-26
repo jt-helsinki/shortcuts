@@ -53,6 +53,26 @@ Finally push your changes.
 
 `git push --force-with-lease`
 
+#### Bash git-merge-squash command
+
+Add the following to ~/.bash_profile
+
+```
+git-current-branch() {
+  git branch | grep "*" | cut -d ' ' -f 2
+}
+
+git-merge-squash() {
+  branch=`git-current-branch`
+  git checkout master
+  git branch -m $branch $branch-OLD
+  git checkout -b $branch
+  git merge --squash $branch-OLD
+  git branch -D $branch-OLD
+}anch -D $branch-OLD
+}
+```
+
 ## Rollbacks
 
 #### Rollback on local to a specific commit
