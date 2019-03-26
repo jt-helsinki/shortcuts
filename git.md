@@ -74,7 +74,7 @@ git-merge-squash() {
 
 From the root of your project, at the command line type:
 
-`$> git-merge-squash`
+`$ git-merge-squash`
 
 ## Rollbacks
 
