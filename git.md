@@ -69,9 +69,12 @@ git-merge-squash() {
   git checkout -b $branch
   git merge --squash $branch-OLD
   git branch -D $branch-OLD
-}anch -D $branch-OLD
 }
 ```
+
+From the root of your project, at the command line type:
+
+`$> git-merge-squash`
 
 ## Rollbacks
 
