@@ -18,6 +18,8 @@ A list of common commands for working with Docker.
 
 `docker run -i -t [IMAGE NAME HERE]`
 
+This is especially handy for running OS images. i.e. Centos, etc.
+
 #### List running docker containers:
 
 `docker ps`
