@@ -14,6 +14,10 @@ A list of common commands for working with Docker.
 
 `docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] --name=[CUSTOM CONTAINER NAME HERE] [IMAGE NAME HERE]`
 
+#### Start a container with an interactive shell. 
+
+`docker run -i -t [IMAGE NAME HERE]`
+
 #### List running docker containers:
 
 `docker ps`
