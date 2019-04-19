@@ -6,6 +6,10 @@ A list of common commands for working with Docker.
 
 ## Containers
 
+#### Start a container and mount local drive
+
+`docker run -v [LOCAL PATH]:[CONTAINER PATH]`
+
 #### Start a container with port mapping
 
 `docker run -p  [HOST PORT HERE]:[INTERNAL CONTAINER PORT HERE] [IMAGE NAME HERE]`
