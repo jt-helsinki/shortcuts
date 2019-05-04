@@ -31,7 +31,7 @@ Replace string: `"$1",`
 "Value 5",
 ```
 
-### Text Between Two Delimeters
+### Text Between Two Delimeters and remove the delimeters
 
 ##### Test Values
 
@@ -53,7 +53,7 @@ Replace string: `''test`
 'PreviousUrl': 'test',
 ```
 
-### Text Between Two Delimeters
+### Text Between Two Delimeters including the Delimeters
 
 ##### Test Values
 
@@ -65,7 +65,7 @@ Replace string: `''test`
 
 #### Regex
 Regex: `/:[^:]+(?=,*$)\gm`
-Replace string: ``
+Replace string: `,`
 
 #### Result
 
