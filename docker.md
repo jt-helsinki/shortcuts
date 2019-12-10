@@ -87,17 +87,17 @@ in the ECS cluster setup.
 
 #### Explore running container by container ID     
 `docker ps -a` (list container ids)  
-`docker exec -t -i container-id bash`
+`docker exec -t -i container-id ash`
 
 #### Explore image by image name
 `docker inspect IMAGE [IMAGE NAME HERE]`
 
 #### Start Container with Interactive Shell (Non-Dameon)
-`docker run -i -t --rm ubuntu /bin/bash`  
+`docker run -i -t --rm [IMAGE ID HERE] ash`  
 NOTE: This will exit the container after the session ends.
 
 #### Start Container with Interactive Shell (Dameon) 
-`docker run --name daemon -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"`  
+`docker run --name daemon -d [IMAGE ID/NAME HERE] /bin/sh -c "while true; do echo hello world; sleep 1; done"`  
 Run as a daemon to keep the container running after the end of the session.
 
 ## Misc
