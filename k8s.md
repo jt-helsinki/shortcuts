@@ -13,3 +13,10 @@ To have connect and deploy to the EKS cluster directly run the following:
 Verify this by running:
 
 `kubectl config view`
+
+
+## Cluster Information
+
+### View the cluster Services | Deployments | Pods
+
+kubectl get <services | deployments | pods> [-o wide]
