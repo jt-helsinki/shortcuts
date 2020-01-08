@@ -2,6 +2,10 @@
 
 A list of common commands for working with Kubernetes (K8s).
 
+This is the most useful cheatsheet:
+
+[https://kubernetes.io/docs/reference/kubectl/cheatsheet/](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
 ## Configuration
 
 ### Add EKS cluster to kubectl config
@@ -19,4 +23,10 @@ Verify this by running:
 
 ### View the cluster Services | Deployments | Pods
 
-kubectl get <services | deployments | pods> [-o wide]
+`kubectl get <services | deployments | pods> [-o wide]`
+
+## Deployments
+
+### Delete all Pods, Services and/or Deployments
+
+`kubectl -n my-ns delete pod, deployment, svc --al`
