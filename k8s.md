@@ -27,6 +27,10 @@ Verify this by running:
 
 ## Deployments
 
+### Delete Pods, Services and/or Deployments by name
+
+`kubectl [-n my-namespace] delete pod, deployment, svc <pod|deployment|service name> [,  <pod2|deployment2|service name2>]`
+
 ### Delete all Pods, Services and/or Deployments
 
-`kubectl -n my-ns delete pod, deployment, svc --al`
+`kubectl [-n my-namespace] delete pod, deployment, svc --all`
