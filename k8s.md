@@ -27,6 +27,12 @@ Verify this by running:
 
 ## Deployments
 
+### Force Delete Pods, Services and/or Deployments by name
+
+`kubectl delete pod, deployment, svc <PODNAME> --grace-period=0 --force [--namespace <NAMESPACE>]`
+
+This is particularly useful if a deleted pod, serivce or deployment won't terminate. That is, it hangs in the "Terminating" state. 
+
 ### Delete Pods, Services and/or Deployments by name
 
 `kubectl [-n my-namespace] delete pod, deployment, svc <pod|deployment|service name> [,  <pod2|deployment2|service name2>]`
