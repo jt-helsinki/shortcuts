@@ -25,6 +25,10 @@ Verify this by running:
 
 `kubectl get <services | deployments | pods> [-o wide]`
 
+### View all cluster events
+
+`kubectl get events --all-namespaces  [--sort-by='.metadata.creationTimestamp']`
+
 ## Deployments
 
 ### Force Delete Pods, Services and/or Deployments by name
