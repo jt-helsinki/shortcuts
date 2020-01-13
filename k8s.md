@@ -14,6 +14,8 @@ To have connect and deploy to the EKS cluster directly run the following:
 
 `aws eks update-kubeconfig --<cluster name> --region <region-name>`
 
+See this link for more info: [https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html](https://docs.aws.amazon.com/eks/latest/userguide/add-user-role.html)
+
 Verify this by running:
 
 `kubectl config view`
