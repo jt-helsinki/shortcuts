@@ -35,7 +35,9 @@ Verify this by running:
 
 ### Drain the nodes
 
-`ip-10-0-12-175.eu-central-1.compute.internal `
+`kubectl get nodes`
+
+`kubectl drain --force --ignore-daemonsets --delete-local-data <node name i.e. ip-xx-xx-xx-xxx.eu-central-1.compute.internal>`
 
 ## Deployments
 
