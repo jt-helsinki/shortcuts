@@ -31,6 +31,12 @@ Verify this by running:
 
 `kubectl get events --all-namespaces  [--sort-by='.metadata.creationTimestamp']`
 
+## Nodes
+
+### Drain the nodes
+
+`ip-10-0-12-175.eu-central-1.compute.internal `
+
 ## Deployments
 
 ### Force Delete Pods, Services and/or Deployments by name
