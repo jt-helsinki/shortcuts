@@ -20,6 +20,10 @@ Verify this by running:
 
 `kubectl config view`
 
+### Find the AWS EKS AMIs
+
+`aws ec2 describe-images --owners amazon --filters 'Name=name, Values="*eks*"'`
+
 
 ## Cluster Information
 
