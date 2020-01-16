@@ -24,7 +24,7 @@ Verify this by running:
 
 `aws ec2 describe-images --owners amazon --filters 'Name=name, Values="*eks*"'`
 
-Note: ensure your aws-cli is configured for the correct region as AMIs differ from region to region. Version numbers can be found in the AWS marketplace: [https://aws.amazon.com/marketplace] (https://aws.amazon.com/marketplace)
+Note: ensure your aws-cli is configured for the correct region as AMIs differ from region to region. Version numbers can be found in the AWS marketplace: [https://aws.amazon.com/marketplace](https://aws.amazon.com/marketplace)
 
 
 ## Cluster Information
