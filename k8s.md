@@ -22,7 +22,7 @@ Verify this by running:
 
 ### Find the AWS EKS AMIs
 
-`aws ec2 describe-images --owners amazon --filters 'Name=name, Values="*eks*"'`
+`aws ec2 describe-images --owners amazon --filters 'Name=name, Values="*eks*[<product version name i.e. 1.11-v20190220>]"'`
 
 Note: ensure your aws-cli is configured for the correct region as AMIs differ from region to region. Version numbers can be found in the AWS marketplace: [https://aws.amazon.com/marketplace](https://aws.amazon.com/marketplace)
 
