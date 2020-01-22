@@ -69,5 +69,5 @@ This is particularly useful if a deleted pod, serivce or deployment won't termin
 
 ### Interactive shell to a running container
 
-`kubectl exec -it <pod name> -- /bin/bash`
+`kubectl exec -it <pod name> [-n <namespace>] -- /bin/sh`
 
