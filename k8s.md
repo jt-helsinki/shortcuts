@@ -63,6 +63,11 @@ This is particularly useful if a deleted pod, serivce or deployment won't termin
 
 ## Debugging
 
-### Get current state of Pod, Service or Deployment
+### Retrieve current state of Pod, Service or Deployment
 
 `kubectl describe <pod|deployment|service>  <pod name|deployment name|service name> [--namespace <namespace>]`
+
+### Interactive shell to a running container
+
+`kubectl exec -it <pod name> -- /bin/bash`
+
