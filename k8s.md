@@ -71,3 +71,96 @@ This is particularly useful if a deleted pod, serivce or deployment won't termin
 
 `kubectl exec -it <pod name> [-n <namespace>] -- /bin/sh`
 
+## Kubectl script
+
+This is a useful function that can be added to `~/.zshrc` or `~/.bashrc` to help you easily use kubectl without the copy & paste. A bit hacky and not perfect but it might help you.
+
+```
+x-kubectl() {
+    namespaces=( $( kubectl get namespaces --no-headers -o custom-columns=":metadata.name" ) )
+
+    echo "Which namespace?"
+
+    for (( i = 1; i <= ${#namespaces[@]}; i++ )) do
+      printf "%s\t%s\n" "$((i))" "${namespaces[$i]}"
+    done
+
+    echo -n "Namespace: "
+    read namespace_input
+    echo
+    namespace=$namespaces[$((namespace_input))]
+
+    resources=(
+      "pod"
+      "deployment"
+      "service"
+      "ingress"
+    )
+    echo "Which resource?"
+    for (( i = 1; i <= ${#resources[@]}; i++ )) do
+      printf "%s\t%s\n" "$((i))" "${resources[$i]}"
+    done
+
+    echo -n "Resource: "
+    read resource_input
+    echo
+    resource=$resources[$((resource_input))]
+
+    items=( $( kubectl get $resource  -n $namespace --no-headers -o custom-columns=":metadata.name") )
+
+    echo "Which $resource?"
+    for (( i = 1; i <= ${#items[@]}; i++ )) do
+      printf "%s\t%s\n" "$((i))" "${items[$i]}"
+    done
+
+    echo -n "$resource: "
+    read item_input
+    echo
+    item=$items[$((item_input))]
+
+    actions=(
+      "describe"
+      "get"
+      "delete"
+    )
+    if  [[ ( "pod" == $resource ) ]]
+    then
+      actions+="interactive shell (pods only)"
+    fi
+
+    unset action
+    while [ -z "$action" ];
+    do
+  	  echo "Which action?"
+  	  for (( i = 1; i <= ${#actions[@]}; i++ )) do
+  		printf "%s\t%s\n" "$((i))" "${actions[$i]}"
+  	  done
+
+  	  echo -n "Action: "
+  	  read action_input
+  	  action=$actions[$((action_input))]
+      echo
+    done
+
+    echo
+    echo "######################################################################"
+
+    command="kubectl $action $resource -n $namespace $item"
+    if  [[ ( "4" == $action_input ) && ( "pod" == $resource ) ]]; # interactive shell for pods
+    then
+      command="kubectl exec -it $item -n $namespace -- /bin/sh"
+    fi
+
+    echo
+    echo
+    echo "Command run: $command"
+    echo
+    echo
+    eval $command
+    echo
+    echo
+    echo "######################################################################"
+    echo
+
+}
+```
