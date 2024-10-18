@@ -75,6 +75,9 @@ in the ECS cluster setup.
 #### Delete all untagged, unnamed, dangling images
 `docker images -q --no-trunc -f dangling=true | xargs docker rmi`
 
+#### Clean up the images
+`docker image prune`
+
 ## Volumes
 
 #### Delete all dangling volumes
@@ -104,6 +107,9 @@ Run as a daemon to keep the container running after the end of the session.
 
 #### Clean up the local machine
 `docker system prune`
+
+#### Clean up the build cache
+`docker builder prune`
 
 #### Clean up the server machine
 ```
