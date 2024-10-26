@@ -55,6 +55,10 @@ This is especially handy for running OS images. i.e. Centos, etc.
 #### Delete all containers
 `docker rm  -f $(docker ps -a -q)`
 
+#### View the Docker file commands
+`docker image history --no-trunc <image_name>`
+Useful to try and view the dockerfile for an image when you can't find the dockerfile.
+
 **NOTE:** when using AWS ECS be careful using this as deleting the `amazon/amazon-ecs-agent:latest` 
 container means the ECS service will no longer run. If this does happen, simply recreate the service 
 in the ECS cluster setup.
